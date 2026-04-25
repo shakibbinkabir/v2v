@@ -25,10 +25,6 @@ Companion to `V2V_Bridge_PRD_Staged_v1.1.md`. Each block below is a complete, se
 
 Every prompt below opens with: *"Before you start, read `CONVENTIONS.md` at the repo root."* Create that file once after Stage 1 with the content below so every subsequent agent has the same baseline.
 
-```markdown
-# CONVENTIONS.md
-
-```
 
 ---
 
