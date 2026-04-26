@@ -22,8 +22,12 @@ import type { BilingualString, Reel } from "@/lib/types";
 
 type Params = Promise<{ id: string }>;
 
+const isDev = process.env.NODE_ENV === "development";
+
 export function generateStaticParams() {
-  return getAllEntrepreneurs().map((e) => ({ id: e.id }));
+  return getAllEntrepreneurs({ includeUnpublished: true }).map((e) => ({
+    id: e.id,
+  }));
 }
 
 export async function generateMetadata({
@@ -32,7 +36,9 @@ export async function generateMetadata({
   params: Params;
 }): Promise<Metadata> {
   const { id } = await params;
-  const entrepreneur = getAllEntrepreneurs().find((e) => e.id === id);
+  const entrepreneur = getAllEntrepreneurs({ includeUnpublished: true }).find(
+    (e) => e.id === id,
+  );
   if (!entrepreneur) {
     return { title: "Entrepreneur not found" };
   }
@@ -97,8 +103,11 @@ export default async function EntrepreneurDetailPage({
   params: Params;
 }) {
   const { id } = await params;
-  const entrepreneur = getAllEntrepreneurs().find((e) => e.id === id);
+  const entrepreneur = getAllEntrepreneurs({ includeUnpublished: true }).find(
+    (e) => e.id === id,
+  );
   if (!entrepreneur) notFound();
+  if (!entrepreneur.published && !isDev) notFound();
 
   const showPhoto =
     entrepreneur.photoConsent === true && Boolean(entrepreneur.photo);
