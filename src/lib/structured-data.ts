@@ -1,7 +1,7 @@
 import type { Entrepreneur, PodcastEpisode } from "./types";
 
 const BASE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.v2vbridge.org"
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://v2vbridge.capec.consulting"
 ).replace(/\/+$/, "");
 
 const ORG_NAME = "V2V Bridge";

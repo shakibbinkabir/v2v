@@ -12,8 +12,8 @@ backend:
 # turns every save into a draft PR for YSC + project lead review.
 # publish_mode: editorial_workflow
 
-site_url: https://www.v2vbridge.org
-display_url: https://www.v2vbridge.org
+site_url: https://v2vbridge.capec.consulting
+display_url: https://v2vbridge.capec.consulting
 logo_url: /logo-placeholder.svg
 
 media_folder: public/uploads

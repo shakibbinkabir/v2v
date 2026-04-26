@@ -25,7 +25,7 @@ const hindSiliguri = Hind_Siliguri({
 });
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.v2vbridge.org";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://v2vbridge.capec.consulting";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

@@ -8,7 +8,7 @@ import {
 export const dynamic = "force-static";
 
 const BASE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.v2vbridge.org"
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://v2vbridge.capec.consulting"
 ).replace(/\/+$/, "");
 
 const STATIC_ROUTES: { path: string; changeFrequency: ChangeFrequency }[] = [
