@@ -5,6 +5,7 @@ import "./globals.css";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { getSiteCopy } from "@/lib/content";
+import { jsonLDScript, organizationLD } from "@/lib/structured-data";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -57,6 +58,10 @@ export default function RootLayout({
           {children}
         </main>
         <Footer site={site} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: jsonLDScript(organizationLD()) }}
+        />
       </body>
     </html>
   );
