@@ -3,9 +3,11 @@ backend:
   repo: shakibbinkabir/v2v
   branch: integration-v1
   # The OAuth proxy that exchanges GitHub's OAuth code for an access token.
-  # Replace with your deployed proxy URL. See ADMIN_SETUP.md.
-  base_url: https://CHANGE-ME.vercel.app
-  auth_endpoint: api/auth
+  # Default proxy used here: sterlingwes/decap-proxy on Cloudflare Workers,
+  # which serves the handshake at /auth. Replace with your deployed Worker URL.
+  # See ADMIN_SETUP.md.
+  base_url: https://CHANGE-ME.workers.dev
+  auth_endpoint: auth
 
 # Direct-commit mode: each save commits straight to the configured branch.
 # Switch to editorial workflow later by uncommenting the next line — that
