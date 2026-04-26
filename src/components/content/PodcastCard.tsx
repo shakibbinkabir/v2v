@@ -16,18 +16,17 @@ export function PodcastCard({
   const href = `/podcasts/${podcast.id}`;
   return (
     <Card className="p-5">
-      <p className="font-sans text-xs uppercase tracking-wider text-brand-coral">
-        Episode {podcast.episodeNumber}
+      <p className="text-xs uppercase tracking-wider text-brand-coral">
+        <span lang="en" className="font-sans">Episode {podcast.episodeNumber}</span>
+        <span lang="bn" className="font-bangla">এপিসোড {podcast.episodeNumber}</span>
       </p>
 
-      <h3 className="mt-2 font-sans text-lg font-semibold text-brand-teal">
+      <h3 className="mt-2 text-lg font-semibold text-brand-teal">
         <Link href={href} className="hover:underline focus-visible:underline">
-          <span lang="en">{podcast.title.en}</span>
+          <span lang="en" className="font-sans">{podcast.title.en}</span>
+          <span lang="bn" className="font-bangla">{podcast.title.bn}</span>
         </Link>
       </h3>
-      <p className="mt-1 font-bangla text-base text-brand-mute">
-        <span lang="bn">{podcast.title.bn}</span>
-      </p>
 
       <div className="mt-4 flex flex-wrap items-center gap-2">
         {sectorLabel ? <Tag>{sectorLabel}</Tag> : null}
@@ -38,9 +37,10 @@ export function PodcastCard({
 
       <Link
         href={href}
-        className="mt-5 inline-flex items-center font-sans text-sm font-medium text-brand-teal hover:underline"
+        className="mt-5 inline-flex items-center text-sm font-medium text-brand-teal hover:underline"
       >
-        Listen →
+        <span lang="en" className="font-sans">Listen →</span>
+        <span lang="bn" className="font-bangla">শুনুন →</span>
       </Link>
     </Card>
   );

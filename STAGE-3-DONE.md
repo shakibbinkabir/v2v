@@ -62,8 +62,7 @@ is the spec-allowed fallback.
   heading + body via `<BilingualText>` (`as="h2"` / `as="p"`).
 - Closing credit block (`<dl>` of bilingual role labels + real text):
   Plan IB (Youth Equality Award 2026), CapeC. Consulting (Satkhira &
-  Dhaka), Zeplow Logic (build partner), Vercel + Spotify for
-  Podcasters (hosting & audio).
+  Dhaka), Vercel + Spotify for Podcasters (hosting & audio).
 
 ### Safeguarding (`/safeguarding`)
 
@@ -118,11 +117,11 @@ is the spec-allowed fallback.
    structural label, not body content.
 
 3. **About-page credits — inlined real text, not placeholders.** The
-   spec said "Use real text, not placeholders". The four credit roles
-   (Funder / Implementer / Build partner / Hosting & infrastructure)
-   are inlined with their bilingual role labels. The `who` strings
-   stay English-only (organisation names — Plan IB, CapeC.,
-   Zeplow Logic, Vercel, Spotify for Podcasters — are not translated).
+   spec said "Use real text, not placeholders". The credit roles
+   (Funder / Implementer / Hosting & infrastructure) are inlined
+   with their bilingual role labels. The `who` strings stay
+   English-only (organisation names — Plan IB, CapeC., Vercel,
+   Spotify for Podcasters — are not translated).
 
 4. **`<main>` already provided by `src/app/layout.tsx`.** Stage 3
    pages return fragments / sequences of `<Hero>` + `<Section>` rather
@@ -179,7 +178,7 @@ contained:
 - `/` — Hero CTAs, "Latest stories / সর্বশেষ গল্প", "Coming May–June
   2026" empty state, Header + Footer.
 - `/about` — `About V2V Bridge` heading, bilingual sections,
-  Plan IB / CapeC / Zeplow / Vercel credits.
+  Plan IB / CapeC / Vercel credits.
 - `/safeguarding` — bilingual sections, "Report a safeguarding
   concern" callout pointing at `/withdraw`.
 - `/withdraw` — bilingual sections including the inline

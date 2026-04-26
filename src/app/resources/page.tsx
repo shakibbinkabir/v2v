@@ -67,23 +67,20 @@ export default function ResourcesPage() {
               content={BRIEF_NOTE}
               as="p"
               className="mt-3 text-sm text-brand-ink/85"
-              bnClassName="text-brand-mute"
             />
             <div className="mt-5">
               {briefAvailable ? (
                 <Button href="/learning-brief.pdf" variant="primary">
-                  <span lang="en">{BRIEF_AVAILABLE.en}</span>
+                  <span lang="en" className="font-sans">{BRIEF_AVAILABLE.en}</span>
+                  <span lang="bn" className="font-bangla">{BRIEF_AVAILABLE.bn}</span>
                 </Button>
               ) : (
                 <span
-                  className="inline-flex items-center rounded-full border border-brand-coral/40 bg-brand-cream px-4 py-2 font-sans text-sm font-medium text-brand-coral"
+                  className="inline-flex items-center rounded-full border border-brand-coral/40 bg-brand-cream px-4 py-2 text-sm font-medium text-brand-coral"
                   aria-disabled="true"
                 >
-                  <span lang="en">{BRIEF_PENDING.en}</span>
-                  <span aria-hidden="true" className="mx-2">/</span>
-                  <span lang="bn" className="font-bangla">
-                    {BRIEF_PENDING.bn}
-                  </span>
+                  <span lang="en" className="font-sans">{BRIEF_PENDING.en}</span>
+                  <span lang="bn" className="font-bangla">{BRIEF_PENDING.bn}</span>
                 </span>
               )}
             </div>

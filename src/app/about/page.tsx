@@ -33,10 +33,6 @@ const CREDITS: Credit[] = [
     who: "CapeC. Consulting (Satkhira & Dhaka)",
   },
   {
-    role: { en: "Build partner", bn: "বিল্ড অংশীদার" },
-    who: "Zeplow Logic",
-  },
-  {
     role: { en: "Hosting & infrastructure", bn: "হোস্টিং ও অবকাঠামো" },
     who: "Vercel · Spotify for Podcasters",
   },
@@ -75,12 +71,9 @@ export default function AboutPage() {
                 key={credit.who}
                 className="grid gap-1 rounded-lg border border-brand-rule/60 bg-white p-4 sm:grid-cols-[10rem_1fr] sm:gap-6"
               >
-                <dt className="font-sans text-sm font-semibold uppercase tracking-wide text-brand-coral">
-                  <span lang="en">{credit.role.en}</span>
-                  <span aria-hidden="true"> · </span>
-                  <span lang="bn" className="font-bangla text-brand-mute">
-                    {credit.role.bn}
-                  </span>
+                <dt className="text-sm font-semibold uppercase tracking-wide text-brand-coral">
+                  <span lang="en" className="font-sans">{credit.role.en}</span>
+                  <span lang="bn" className="font-bangla">{credit.role.bn}</span>
                 </dt>
                 <dd className="font-sans text-base text-brand-ink/90">
                   {credit.who}

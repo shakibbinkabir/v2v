@@ -59,11 +59,9 @@ export default function ReelsGalleryPage() {
           </div>
         ) : (
           <div className="rounded-lg border border-dashed border-brand-rule bg-brand-cream/60 px-6 py-16 text-center">
-            <p className="font-sans text-base font-medium text-brand-teal">
-              <span lang="en">{EMPTY_TITLE.en}</span>
-            </p>
-            <p className="mt-2 font-bangla text-base text-brand-mute">
-              <span lang="bn">{EMPTY_TITLE.bn}</span>
+            <p className="text-base font-medium text-brand-teal">
+              <span lang="en" className="font-sans">{EMPTY_TITLE.en}</span>
+              <span lang="bn" className="font-bangla">{EMPTY_TITLE.bn}</span>
             </p>
           </div>
         )}

@@ -23,3 +23,11 @@ body {
   color: var(--color-brand-ink);
   font-family: var(--font-sans);
 }
+
+html[lang="en"] [lang="bn"]:not([data-loc-keep]) {
+  display: none;
+}
+
+html[lang="bn"] [lang="en"]:not([data-loc-keep]) {
+  display: none;
+}

@@ -69,11 +69,11 @@ export default function SafeguardingPage() {
               content={CALLOUT_BODY}
               as="p"
               className="mt-3 text-base text-brand-ink/90"
-              bnClassName="text-brand-mute"
             />
             <div className="mt-5">
               <Button href="/withdraw" variant="primary">
-                <span lang="en">{CALLOUT_CTA.en}</span>
+                <span lang="en" className="font-sans">{CALLOUT_CTA.en}</span>
+                <span lang="bn" className="font-bangla">{CALLOUT_CTA.bn}</span>
               </Button>
             </div>
           </aside>

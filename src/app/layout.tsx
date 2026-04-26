@@ -4,8 +4,12 @@ import "./globals.css";
 
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { LocaleProvider } from "@/components/locale/LocaleProvider";
 import { getSiteCopy } from "@/lib/content";
+import { DEFAULT_LOCALE, LOCALE_STORAGE_KEY } from "@/lib/locale";
 import { jsonLDScript, organizationLD } from "@/lib/structured-data";
+
+const LOCALE_BOOTSTRAP = `(function(){try{var v=localStorage.getItem(${JSON.stringify(LOCALE_STORAGE_KEY)});if(v==="en"||v==="bn"){document.documentElement.setAttribute("lang",v);}}catch(e){}})();`;
 
 const inter = Inter({
   subsets: ["latin"],
@@ -51,13 +55,22 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   const site = getSiteCopy();
   return (
-    <html lang="en" className={`${inter.variable} ${hindSiliguri.variable}`}>
+    <html
+      lang={DEFAULT_LOCALE}
+      suppressHydrationWarning
+      className={`${inter.variable} ${hindSiliguri.variable}`}
+    >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: LOCALE_BOOTSTRAP }} />
+      </head>
       <body className="flex min-h-screen flex-col">
-        <Header site={site} />
-        <main id="main-content" className="flex-1">
-          {children}
-        </main>
-        <Footer site={site} />
+        <LocaleProvider>
+          <Header site={site} />
+          <main id="main-content" className="flex-1">
+            {children}
+          </main>
+          <Footer site={site} />
+        </LocaleProvider>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: jsonLDScript(organizationLD()) }}

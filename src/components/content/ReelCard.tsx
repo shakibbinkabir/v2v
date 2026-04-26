@@ -64,11 +64,9 @@ export function ReelCard({
             {platformLabel}
           </span>
           <div className="relative z-10 w-full bg-gradient-to-t from-black/60 to-transparent p-4">
-            <p className="font-sans text-sm text-white">
-              <span lang="en">{excerpt(reel.caption.en)}</span>
-            </p>
-            <p className="mt-1 font-bangla text-sm text-white/90">
-              <span lang="bn">{excerpt(reel.caption.bn)}</span>
+            <p className="text-sm text-white">
+              <span lang="en" className="font-sans">{excerpt(reel.caption.en)}</span>
+              <span lang="bn" className="font-bangla">{excerpt(reel.caption.bn)}</span>
             </p>
           </div>
         </div>

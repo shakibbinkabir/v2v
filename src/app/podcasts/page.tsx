@@ -28,14 +28,9 @@ export default function PodcastsIndexPage() {
       <Section tone="white">
         {podcasts.length === 0 ? (
           <div className="py-12 text-center">
-            <p className="font-sans text-lg text-brand-ink/85">
-              <span lang="en">Episodes publishing May–June 2026</span>
-            </p>
-            <p
-              className="mt-2 font-bangla text-lg text-brand-mute"
-              lang="bn"
-            >
-              এপিসোডগুলি মে–জুন ২০২৬-এ প্রকাশ হবে
+            <p className="text-lg text-brand-ink/85">
+              <span lang="en" className="font-sans">Episodes publishing May–June 2026</span>
+              <span lang="bn" className="font-bangla">এপিসোডগুলি মে–জুন ২০২৬-এ প্রকাশ হবে</span>
             </p>
           </div>
         ) : (

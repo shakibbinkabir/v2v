@@ -26,25 +26,39 @@ export default function NotFound() {
         actions={
           <>
             <Button href="/" variant="primary">
-              Back to home
+              <span lang="en" className="font-sans">Back to home</span>
+              <span lang="bn" className="font-bangla">হোমে ফিরুন</span>
             </Button>
             <Button href="/podcasts" variant="secondary">
-              Listen to podcasts
+              <span lang="en" className="font-sans">Listen to podcasts</span>
+              <span lang="bn" className="font-bangla">পডকাস্ট শুনুন</span>
             </Button>
           </>
         }
       />
       <Container className="py-12">
-        <p className="font-sans text-sm text-brand-mute">
-          If you arrived here by following a link from another site, please let
-          us know — see the contact options on the{" "}
-          <a
-            href="/about"
-            className="text-brand-teal underline underline-offset-4"
-          >
-            About
-          </a>{" "}
-          page.
+        <p className="text-sm text-brand-mute">
+          <span lang="en" className="font-sans">
+            If you arrived here by following a link from another site, please let
+            us know — see the contact options on the{" "}
+            <a
+              href="/about"
+              className="text-brand-teal underline underline-offset-4"
+            >
+              About
+            </a>{" "}
+            page.
+          </span>
+          <span lang="bn" className="font-bangla">
+            অন্য কোনো সাইটের লিঙ্ক থেকে এখানে এসে থাকলে আমাদের জানান —{" "}
+            <a
+              href="/about"
+              className="text-brand-teal underline underline-offset-4"
+            >
+              পরিচিতি
+            </a>{" "}
+            পৃষ্ঠায় যোগাযোগের তথ্য রয়েছে।
+          </span>
         </p>
       </Container>
     </>

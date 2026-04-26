@@ -34,7 +34,7 @@ export function Hero({
             }`}
           >
             <span lang="en" className="font-sans">{kicker.en}</span>
-            <span lang="bn" className="ml-2 font-bangla">{kicker.bn}</span>
+            <span lang="bn" className="font-bangla">{kicker.bn}</span>
           </p>
         ) : null}
 
@@ -42,9 +42,6 @@ export function Hero({
           content={title}
           as="h1"
           className="font-sans text-4xl font-semibold leading-tight tracking-tight sm:text-5xl"
-          bnClassName={
-            isTeal ? "text-brand-cream/90" : "text-brand-mute"
-          }
         />
 
         {intro ? (
@@ -54,9 +51,6 @@ export function Hero({
             className={`mt-6 max-w-2xl text-lg ${
               isTeal ? "text-brand-cream/90" : "text-brand-ink/90"
             }`}
-            bnClassName={
-              isTeal ? "text-brand-cream/80" : "text-brand-mute"
-            }
           />
         ) : null}
 

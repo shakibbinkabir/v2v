@@ -74,13 +74,8 @@ export default async function PodcastDetailPage({
       <Section tone="cream">
         <div className="max-w-3xl">
           <p className="text-sm uppercase tracking-[0.2em] text-brand-coral">
-            <span lang="en" className="font-sans">
-              Episode {epEn}
-            </span>
-            <span aria-hidden="true"> / </span>
-            <span lang="bn" className="font-bangla">
-              এপিসোড {epBn}
-            </span>
+            <span lang="en" className="font-sans">Episode {epEn}</span>
+            <span lang="bn" className="font-bangla">এপিসোড {epBn}</span>
           </p>
 
           <BilingualText
@@ -89,15 +84,21 @@ export default async function PodcastDetailPage({
             className="mt-4 font-sans text-4xl font-semibold leading-tight tracking-tight text-brand-ink sm:text-5xl"
           />
 
-          <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 font-sans text-sm text-brand-mute">
-            <span>
+          <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-brand-mute">
+            <span lang="en" className="font-sans">
               Recorded{" "}
               <time dateTime={podcast.recordedOn}>
                 {formatDate(podcast.recordedOn, "en")}
               </time>
             </span>
+            <span lang="bn" className="font-bangla">
+              রেকর্ড{" "}
+              <time dateTime={podcast.recordedOn}>
+                {formatDate(podcast.recordedOn, "bn")}
+              </time>
+            </span>
             <span aria-hidden="true">·</span>
-            <span>{formatDuration(podcast.durationSeconds)}</span>
+            <span className="font-sans">{formatDuration(podcast.durationSeconds)}</span>
           </div>
         </div>
       </Section>
@@ -121,9 +122,10 @@ export default async function PodcastDetailPage({
           >
             <h2
               id="featured-entrepreneur-heading"
-              className="font-sans text-sm font-semibold uppercase tracking-wide text-brand-teal"
+              className="text-sm font-semibold uppercase tracking-wide text-brand-teal"
             >
-              Featured entrepreneur
+              <span lang="en" className="font-sans">Featured entrepreneur</span>
+              <span lang="bn" className="font-bangla">আলোচ্য উদ্যোক্তা</span>
             </h2>
             {entrepreneur && entrepreneur.published ? (
               <EntrepreneurCard entrepreneur={entrepreneur} />
@@ -132,8 +134,9 @@ export default async function PodcastDetailPage({
                 <p className="font-sans text-base font-semibold text-brand-teal">
                   {entrepreneur.displayName}
                 </p>
-                <p className="mt-1 font-sans text-xs text-brand-mute">
-                  Profile not yet published.
+                <p className="mt-1 text-xs text-brand-mute">
+                  <span lang="en" className="font-sans">Profile not yet published.</span>
+                  <span lang="bn" className="font-bangla">প্রোফাইল এখনও প্রকাশিত হয়নি।</span>
                 </p>
               </Card>
             ) : null}
@@ -144,15 +147,10 @@ export default async function PodcastDetailPage({
       {relatedReels.length > 0 ? (
         <Section tone="cream">
           <div className="flex items-baseline justify-between gap-4">
-            <h2 className="font-sans text-2xl font-semibold text-brand-teal">
-              Related reels
+            <h2 className="text-2xl font-semibold text-brand-teal">
+              <span lang="en" className="font-sans">Related reels</span>
+              <span lang="bn" className="font-bangla">সম্পর্কিত রিল</span>
             </h2>
-            <p
-              className="font-bangla text-sm text-brand-mute"
-              lang="bn"
-            >
-              সম্পর্কিত রিল
-            </p>
           </div>
           <ul className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {relatedReels.map((reel) => (

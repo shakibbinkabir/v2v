@@ -154,12 +154,8 @@ export default async function EntrepreneurDetailPage({
             <div className="mt-8">
               <Prose>
                 <p>
-                  <span lang="en">{entrepreneur.summary.en}</span>
-                </p>
-                <p>
-                  <span lang="bn" className="font-bangla text-brand-mute">
-                    {entrepreneur.summary.bn}
-                  </span>
+                  <span lang="en" className="font-sans">{entrepreneur.summary.en}</span>
+                  <span lang="bn" className="font-bangla">{entrepreneur.summary.bn}</span>
                 </p>
               </Prose>
             </div>
@@ -183,18 +179,17 @@ export default async function EntrepreneurDetailPage({
                 />
                 <Link
                   href={`/podcasts/${linkedPodcast.id}`}
-                  className="inline-flex items-center font-sans text-base font-medium text-brand-teal underline-offset-4 hover:underline"
+                  className="inline-flex items-center text-base font-medium text-brand-teal underline-offset-4 hover:underline"
                 >
-                  <span lang="en">{LISTEN_LINK.en} →</span>
+                  <span lang="en" className="font-sans">{LISTEN_LINK.en} →</span>
+                  <span lang="bn" className="font-bangla">{LISTEN_LINK.bn} →</span>
                 </Link>
               </div>
             ) : (
               <div className="rounded-lg border border-dashed border-brand-rule bg-brand-cream/60 px-6 py-10 text-center">
-                <p className="font-sans text-base font-medium text-brand-teal">
-                  <span lang="en">{STORY_COMING_SOON.en}</span>
-                </p>
-                <p className="mt-1 font-bangla text-base text-brand-mute">
-                  <span lang="bn">{STORY_COMING_SOON.bn}</span>
+                <p className="text-base font-medium text-brand-teal">
+                  <span lang="en" className="font-sans">{STORY_COMING_SOON.en}</span>
+                  <span lang="bn" className="font-bangla">{STORY_COMING_SOON.bn}</span>
                 </p>
               </div>
             )}
@@ -228,14 +223,14 @@ export default async function EntrepreneurDetailPage({
             content={ABOUT_BODY}
             as="p"
             className="mt-6 text-lg text-brand-ink/90"
-            bnClassName="text-brand-mute"
           />
           <div className="mt-8">
             <Link
               href="/about"
-              className="inline-flex items-center font-sans text-base font-medium text-brand-teal underline-offset-4 hover:underline"
+              className="inline-flex items-center text-base font-medium text-brand-teal underline-offset-4 hover:underline"
             >
-              <span lang="en">{ABOUT_CTA.en} →</span>
+              <span lang="en" className="font-sans">{ABOUT_CTA.en} →</span>
+              <span lang="bn" className="font-bangla">{ABOUT_CTA.bn} →</span>
             </Link>
           </div>
         </Container>

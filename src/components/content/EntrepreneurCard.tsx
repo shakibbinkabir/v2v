@@ -55,15 +55,17 @@ export function EntrepreneurCard({
           <Tag variant="teal">{entrepreneur.district}</Tag>
         </div>
 
-        <p className="mt-3 font-sans text-sm text-brand-ink/85">
-          <span lang="en">{excerpt(entrepreneur.summary.en)}</span>
+        <p className="mt-3 text-sm text-brand-ink/85">
+          <span lang="en" className="font-sans">{excerpt(entrepreneur.summary.en)}</span>
+          <span lang="bn" className="font-bangla">{excerpt(entrepreneur.summary.bn)}</span>
         </p>
 
         <Link
           href={href}
-          className="mt-4 inline-flex items-center font-sans text-sm font-medium text-brand-teal hover:underline"
+          className="mt-4 inline-flex items-center text-sm font-medium text-brand-teal hover:underline"
         >
-          Read story →
+          <span lang="en" className="font-sans">Read story →</span>
+          <span lang="bn" className="font-bangla">গল্প পড়ুন →</span>
         </Link>
       </div>
     </Card>

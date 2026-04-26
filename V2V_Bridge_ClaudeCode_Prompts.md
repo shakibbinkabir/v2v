@@ -490,8 +490,8 @@ TASKS
 2. ABOUT (/about)
    - Render about.json: title hero, then iterate over sections array
      with BilingualText
-   - At the end, a credit block: Plan IB, CapeC., Youth Equality Award,
-     Zeplow Logic (build partner). Use real text, not placeholders
+   - At the end, a credit block: Plan IB, CapeC., Youth Equality Award.
+     Use real text, not placeholders
 
 3. SAFEGUARDING (/safeguarding)
    - Public-facing summary of how minors and entrepreneurs are
